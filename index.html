@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitch App</title>
+    <link rel="stylesheet" type="text/css" href="master.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>Twitch App</h1>
+      <form>
+        <div class="switch-field">
+          <input type="radio" id="switch_3_left" name="switch_3" value="all" checked/>
+          <label id="all" for="switch_3_left">All Channels</label>
+          <input type="radio" id="switch_3_center" name="switch_3" value="online" />
+          <label id="onlineCh" for="switch_3_center">Online Channels</label>
+          <input type="radio" id="switch_3_right" name="switch_3" value="offline" />
+          <label id="offlineCh" for="switch_3_right">Offline Channels</label>
+        </div>
+      </form>
+      <div class="broMaggedon card"></div>
+    </div>
+  </body>
+</html>

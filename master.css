@@ -1,0 +1,48 @@
+h1 {
+  font-size: 30px;
+}
+
+body {
+	text-align: center;
+	color: white;
+	margin: 0 auto;
+	background-color: black;
+}
+
+.broMaggedon p {
+	max-width: 30%;
+	margin: 10px auto;
+	padding: 20px;
+	background-color: rgba(44, 62, 80,1.0);
+	color: white;
+  transition: transform 0.2s;
+
+}
+
+.offline {
+	color: red;
+}
+
+.hidden {
+	display: none;
+}
+
+.broMaggedon p:hover {
+	transform: scale(.95);
+}
+
+#logo {
+  margin-right: 3px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  float: left;
+}
+
+#channel_name {
+	font-size: 15px;
+}
+
+.card{
+  background-color: black;
+}
