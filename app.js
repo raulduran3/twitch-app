@@ -1,6 +1,6 @@
 $(function() {
   var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "noobs2ninjas"];
-  var placeHolderNigga = "https://i1.wp.com/www.eleganciadospuntocero.com/wp-content/uploads/2013/03/Huevo-twitter-avatar.jpg";
+  var placeHolder = "https://i1.wp.com/www.eleganciadospuntocero.com/wp-content/uploads/2013/03/Huevo-twitter-avatar.jpg";
 
    function channelBroBeansDog(channel) {
      $.ajax({
@@ -10,7 +10,7 @@ $(function() {
        success: function(data) {
          if (data.stream != null) {
            if (data.stream.channel.logo === null) {
-             $(".broMaggedon").append("<a class='onlineChannels'" + "href='https://www.twitch.tv/" + data.stream.channel.name + "' " + "target='_blank'><p><img id='logo' src=" + "" + placeHolderNigga + "'" + ">" + "<strong id='channel_name'>" + data.stream.channel.display_name + "</strong" + "<br>" + "<strong>" + data.stream.game + ": " + "</strong>" + data.stream.channel.status +  "</p></a>");
+             $(".broMaggedon").append("<a class='onlineChannels'" + "href='https://www.twitch.tv/" + data.stream.channel.name + "' " + "target='_blank'><p><img id='logo' src=" + "" + placeHolder + "'" + ">" + "<strong id='channel_name'>" + data.stream.channel.display_name + "</strong" + "<br>" + "<strong>" + data.stream.game + ": " + "</strong>" + data.stream.channel.status +  "</p></a>");
              $(".broMaggedon p").css("backgroundColor", "#85144b");
            } else {
              $(".broMaggedon").append("<a class='onlineChannels'" + "href='https://www.twitch.tv/" + data.stream.channel.name + "' " + "target='_blank'><p><img id='logo' src=" + "'" + data.stream.channel.logo + "'" + ">" + "<strong id='channel_name'>" + data.stream.channel.display_name + "</strong>" + "<br>" + "<strong>" + data.stream.game + ": " + "</strong>" + data.stream.channel.status + "</p></a>");
@@ -18,7 +18,7 @@ $(function() {
            }
 
          } else if (data.status === 422) {
-           $(".broMaggedon").append("<a class='offlineChannels'" + "href='https://www.twitch.tv/" + channel + "' target='_blank'><p><img id='logo' src='" + placeHolderNigga + "'><strong id='channel_name'>" + channel + "</strong><br><i class='offline'>Account closed<i></p></a>");
+           $(".broMaggedon").append("<a class='offlineChannels'" + "href='https://www.twitch.tv/" + channel + "' target='_blank'><p><img id='logo' src='" + placeHolder + "'><strong id='channel_name'>" + channel + "</strong><br><i class='offline'>Account closed<i></p></a>");
 				} else {
 					channelBroBeans(channel);
 				}
